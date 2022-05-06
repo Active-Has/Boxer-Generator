@@ -1,0 +1,15 @@
+{% extends 'home.html' %}
+
+{% block title %}
+<title>Boxer Generator</title>
+{% endblock %}
+
+{% block content %}
+<h2> Boxer Selection</h2>
+<p>{{ stamina_api }}</p> 
+<p>{{ strength_api }}</p> 
+<p>{{ message }}</p>
+<p><a onClick="window.location.reload()">
+<button type="button">New Boxer</button></a></p>
+
+{% endblock %}
