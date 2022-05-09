@@ -10,4 +10,4 @@ def get_boxer():
 
 @app.route('/get_stamina', methods=['GET'])
 def get_stamina():
-    return jsonify(random.randint(1, 100))
+    return jsonify(random.randint(1, 50))

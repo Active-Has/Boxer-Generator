@@ -4,4 +4,4 @@ import random
 
 @app.route('/get_strength', methods=['GET'])
 def get_strength():
-    return jsonify(random.randint(1, 100))
+    return jsonify(random.randint(1, 50))
