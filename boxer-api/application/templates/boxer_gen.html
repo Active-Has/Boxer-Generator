@@ -6,9 +6,10 @@
 
 {% block content %}
 <h2> Boxer Selection</h2>
-<p>{{ stamina_api }}</p> 
-<p>{{ strength_api }}</p> 
-<p>{{ message }}</p>
+<p>Name: {{ boxer_api }}</p>
+<p>Stamina: {{ stamina_api }}</p> 
+<p>Strength: {{ strength_api }}</p> 
+<p>Your boxer is {{boxer_api}} with the strength of {{strength_api}} and is the level of a {{ stats }} fighter.</p>
 <p><a onClick="window.location.reload()">
 <button type="button">New Boxer</button></a></p>
 
