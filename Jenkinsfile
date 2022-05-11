@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Stage2-docker') {
             steps{
-                sh 'ln -s Boxer-Generator/docker-compose.yml'
+                sh 'ln -s Boxer-Generator/docker-compose.yml build'
             }
         }
     }
