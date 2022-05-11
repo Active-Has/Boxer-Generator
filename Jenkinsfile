@@ -7,15 +7,9 @@ pipeline{
             }
         }
         stage('Stage2-docker') {
-            environment {
-                DOCKER_USERNAME = credentials('docker_username')
-                DOCKER_PASSWORD = credentials('docker_password')
-            }
             steps{
-                sh "docker-compose build --parallel"
-                sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"
-                sh "docker-compose push"
+                sh 'ln -s Boxer-Generator/docker-compose.yml'
             }
         }
     }
-}
+}4
