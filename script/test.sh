@@ -7,5 +7,5 @@ do
     cd $dir
     pip3 install -r requirements.txt
     python3 -m pytest --cov=application
-    cd..
+    cd ..
 done
