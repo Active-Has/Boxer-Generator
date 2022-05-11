@@ -16,7 +16,7 @@ services:
 
   boxer-api:
     container_name: boxer-api
-    image: boxer-api:latest
+    image: docker.io/activehas/boxer-api:latest
     build: ./boxer-api
     depends_on:
     - stamina-api
@@ -25,17 +25,17 @@ services:
 
   stamina-api:
     container_name: stamina-api
-    image: stamina-api:latest
+    image: docker.io/activehas/stamina-api:latest
     build: ./stamina-api
 
   strength-api:
     container_name: strength-api
-    image: strength-api:latest
+    image: docker.io/activehas/strength-api:latest
     build: ./strength-api
 
   merge-api:
     container_name: merge-api
-    image: merge-api:latest
+    image: docker.io/activehas/merge-api:latest
     build: ./merge-api
     depends_on:
     - stamina-api
