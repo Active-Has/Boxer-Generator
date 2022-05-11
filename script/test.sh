@@ -1,7 +1,7 @@
 #!/bin/bash
-ls-1
+#ls -a
 source venv/bin/activate
-declare -a directories=("boxer-api""stamina-api""strength-api""merge-api")
+declare -a directories=("boxer-api" "stamina-api" "strength-api" "merge-api")
 for dir in "${directories[@]}"
 do
     cd $dir
