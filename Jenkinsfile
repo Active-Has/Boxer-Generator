@@ -14,11 +14,9 @@ pipeline{
             }
         }
         stage('Stage3-ansible') {
-            stage('ansible configuration') {
             steps {
                 sh "bash ansible.sh"
                 }
             }
         }
     }
-}
