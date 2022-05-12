@@ -8,7 +8,9 @@ pipeline{
         }
         stage('Stage2-docker') {
             steps{
-                sh 'ln -s Boxer-Generator/docker-compose.yaml build'
+                sh "docker-compose build --parallel"
+                sh "docker login -u $DOCKER_UNAME -p $DOCKER_PWORD"
+                sh "docker-compose push"
             }
         }
         stage('Stage3-ansible') {
