@@ -17,6 +17,7 @@ pipeline{
             stage('ansible configuration') {
             steps {
                 sh "bash ansible.sh"
+                }
             }
         }
     }
