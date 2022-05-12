@@ -8,12 +8,12 @@ pipeline{
         }
         stage('Stage2-docker') {
             environment{
-                DOCKER_UNAME = credentials('docker_username')
-                DOCKER_PWORD = credentials('docker_password')
+                DOCKER_USERNAME = credentials('docker_username')
+                DOCKER_PASSWORD = credentials('docker_password')
             }
             steps{
                 sh "docker-compose build --parallel"
-                sh "docker login -u $DOCKER_UNAME -p $DOCKER_PWORD"
+                sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD"
                 sh "docker-compose push"
             }
         }
