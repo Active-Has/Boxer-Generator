@@ -1,6 +1,3 @@
-- hosts: nginx
-  become: yes
-
 - hosts:
   - swarm_managers
   - swarm_workers
