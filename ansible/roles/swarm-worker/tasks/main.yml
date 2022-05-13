@@ -1,6 +1,6 @@
 ---
 # tasks file for swarm-worker
-- name: Join the swarm
+- name: "Join the swarm"
   docker_swarm:
     state: join
     advertise_addr: "{{ ansible_hostname }}"
