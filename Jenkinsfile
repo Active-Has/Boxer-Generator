@@ -17,12 +17,7 @@ pipeline{
                 sh "docker-compose push"
             }
         }
-        stage('Stage3-ansible') {
-            steps {
-                sh "bash ansible.sh"
-                }
-        }
-        stage('Stage4-Deployment'){
+        stage('Stage3-deployment'){
             steps{
                 // sh "scp -i ~/.ssh/ansible_id_rsa docker-compose.yaml swarm-master:/home/jenkins/docker-compose.yaml"
                 // sh "scp -i ~/.ssh/ansible_id_rsa nginx.conf swarm-master:/home/jenkins/nginx.conf"
