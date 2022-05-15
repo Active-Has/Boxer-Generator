@@ -1,10 +1,5 @@
 - hosts: all
   become: yes
-
-- hosts:
-  - swarm_managers
-  - swarm_workers
-  become: yes
   roles:
     - docker-install
 
