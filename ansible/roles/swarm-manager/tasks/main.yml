@@ -1,5 +1,5 @@
 ---
- tasks file for swarm-manager
+#tasks file for swarm-manager
 - name: "Init swarm"
   docker_swarm:
     state: present
