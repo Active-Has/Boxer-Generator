@@ -1,4 +1,4 @@
-FROM python:3.8 
+FROM python:3.8:latest
 WORKDIR /strength-api 
 COPY . . 
 RUN pip install -r requirements.txt
