@@ -54,3 +54,7 @@ addressed regarding the user’s privacy. A risk assessment had to be done for t
 some action could be taken to counteract any risk that could have cropped at anytime. A risk 
 assessment also gives the developer a chance to perhaps implement any measures which could be taken 
 before any risks actually happen. 
+
+![Risk Assessment](https://user-images.githubusercontent.com/101266487/168496810-72fd0914-5a49-493e-9967-fdbf2877af0b.JPG)
+
+
