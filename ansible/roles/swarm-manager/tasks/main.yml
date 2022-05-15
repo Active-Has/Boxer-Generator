@@ -1,6 +1,16 @@
 ---
 # tasks file for swarm-manager
-- name: Initialise swarm
+- name: "Init swarm"
   docker_swarm:
     state: present
-  register: swarm_info
+
+- name: "get swarm info"
+  docker_swarm_info:
+  register: info
+
+- name: "Deploy app"
+  docker_stack:
+    state: present
+    name: event_generator
+    compose:
+      - /home/jenkins/docker-compose.yaml
