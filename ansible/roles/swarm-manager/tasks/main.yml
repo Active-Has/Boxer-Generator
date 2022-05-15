@@ -1,5 +1,5 @@
 ---
-#tasks file for swarm-manager
+# tasks file for swarm-manager
 - name: "Init swarm"
   docker_swarm:
     state: present
@@ -11,6 +11,6 @@
 - name: "Deploy app"
   docker_stack:
     state: present
-    name: Boxer-Generator
+    name: event_generator
     compose:
       - /home/jenkins/docker-compose.yaml
