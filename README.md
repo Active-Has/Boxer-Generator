@@ -83,3 +83,8 @@ pushed into Jenkins. Jenkins then automatically runs tests which produces a repo
 containerised using docker, the images are pushed to Docker Hub. The images created are pushed to Ansible for the building orchestration. 
 Continuous deployment by multiple replica’s created across Docker Swarm means that the application uses four VM’s where three VM’s are 
 used for deployment.
+
+![CI Pipeline2](https://user-images.githubusercontent.com/101266487/168499507-9c12c862-c01a-45b2-a544-1c38e3d66b7e.jpg)
+
+<a name="FED"></a>
+## Front End Design
