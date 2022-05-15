@@ -57,5 +57,29 @@ before any risks actually happen.
 
 ![Risk Assessment](https://user-images.githubusercontent.com/101266487/168496863-e0a7f272-f0fd-4ec5-8780-02afdead9d6d.JPG)
 
+### Functional Requirements & User Stories ###
+The functional requirements are how the application will function and highlighting all the 
+features that will included in the application. Also, the functional requirements are primarily 
+based at the use cases (the user, system functional requirements, goals) for this project and will 
+guarantee a fully purposeful application.
 
+![Functional requirements](https://user-images.githubusercontent.com/101266487/168497215-0b45eac8-b9b9-45ad-b1fc-3260240035af.JPG)
 
+A user story is used to see the end goal which is expressed in the user’s perspective. Furthermore, a user story works well with 
+the functional requirements stated above as it would give a developer whatmust be required for this project to be a success. A few
+user stories are listed below:
+- As a user I want to view the boxer's name so that I can see which boxer has been selected
+- As a user I want to view the boxer's strength so that I can see the strength of the boxer
+- As a user I want to view the boxer's stamina so that I can see the stamina of the boxer
+- As a user I want to view the boxer's stats so that I can see what level my boxer is at
+- As a user I want to click a button so that it generates a new boxer
+
+### CI Pipeline ###
+CI commonly known as Continuous Integration is the automated integration of code from the contributors into a project. The purpose 
+of the CI pipeline is to allow developers to integrate newly generated code easily and frequently. This is achieved through the 
+use of automated testing tools to check if the code is correct before fully integrating it. So, in this instance of the CI pipeline 
+for this project, (in the picture below) code produced on the local machine by Python3 would get pushed to GitHub, which in turn is
+pushed into Jenkins. Jenkins then automatically runs tests which produces a report. Since all the services in this project is 
+containerised using docker, the images are pushed to Docker Hub. The images created are pushed to Ansible for the building orchestration. 
+Continuous deployment by multiple replica’s created across Docker Swarm means that the application uses four VM’s where three VM’s are 
+used for deployment.
