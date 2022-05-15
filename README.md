@@ -55,6 +55,7 @@ some action could be taken to counteract any risk that could have cropped at any
 assessment also gives the developer a chance to perhaps implement any measures which could be taken 
 before any risks actually happen. 
 
-![Risk Assessment](https://user-images.githubusercontent.com/101266487/168496810-72fd0914-5a49-493e-9967-fdbf2877af0b.JPG)
+![Risk Assessment](https://user-images.githubusercontent.com/101266487/168496863-e0a7f272-f0fd-4ec5-8780-02afdead9d6d.JPG)
+
 
 
