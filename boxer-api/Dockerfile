@@ -1,4 +1,4 @@
-FROM python:3.8:latest
+FROM python:3.8
 WORKDIR /boxer-api
 COPY . .
 RUN pip install -r requirements.txt
