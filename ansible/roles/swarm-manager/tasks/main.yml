@@ -1,16 +1,21 @@
 ---
 # tasks file for swarm-manager
-- name: "Init swarm"
+#- name: "Init swarm"
+#  docker_swarm:
+#    state: present
+
+#- name: "get swarm info"
+#  docker_swarm_info:
+#  register: info
+
+#- name: "Deploy app"
+#  docker_stack:
+#    state: present
+#    name: Boxer-Generator
+#    compose:
+#      - /home/jenkins/docker-compose.yaml
+
+- name: Initialise swarm
   docker_swarm:
     state: present
-
-- name: "get swarm info"
-  docker_swarm_info:
-  register: info
-
-- name: "Deploy app"
-  docker_stack:
-    state: present
-    name: Boxer-Generator
-    compose:
-      - /home/jenkins/docker-compose.yaml
+  register: swarm_info
