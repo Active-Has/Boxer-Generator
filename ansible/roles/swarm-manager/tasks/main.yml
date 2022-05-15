@@ -11,6 +11,6 @@
 - name: "Deploy app"
   docker_stack:
     state: present
-    name: event_generator
+    name: Boxer-Generator
     compose:
       - /home/jenkins/docker-compose.yaml
