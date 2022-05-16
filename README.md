@@ -88,3 +88,31 @@ used for deployment.
 
 <a name="FED"></a>
 ## Front End Design
+The front-end of the application was mainly built on very simple HTML code on visual studio. The aim is to produce a simple but 
+working application with a navigation bar for user to navigate around the URL. When first loading the boxing application, the user will 
+be met with the image below. 
+
+![home page](https://user-images.githubusercontent.com/101266487/168595952-5faaa314-9846-4274-bd32-1e3e45be5599.JPG)
+
+As seen above, the users are asked to select generator from the tab above which in turn leads to the boxer generator. This is where the
+users can generate boxers name, stamina, strength, and the overall boxing level which is given in the sentence. Furthermore, the users can
+also see a new boxer button, where on click produces a new boxer with different stats as seen below.
+
+![ggg](https://user-images.githubusercontent.com/101266487/168598555-8a3c4fe8-f803-4730-ad20-3f4daf470efa.JPG)
+
+![Floyd](https://user-images.githubusercontent.com/101266487/168598646-cbae395d-1c20-4342-8975-b7ef20adf186.JPG)
+
+![manny](https://user-images.githubusercontent.com/101266487/168598668-e7da9fe2-c4f9-454d-a19f-75d6e062fc74.JPG)
+
+![MA](https://user-images.githubusercontent.com/101266487/168598697-054e5431-821f-4dcb-8f89-53d4c88d705f.JPG)
+
+![tyson](https://user-images.githubusercontent.com/101266487/168598718-1cb3ee59-790f-4de4-a9e4-8468b99bb0c9.JPG)
+
+As seen above, all boxers have different stats which determines the level they are. This is done by using the stamina and strength number 
+from service 2 & 3. Service 4 combines both numbers together to get one number to give it the appropriate level. For example, in the picture 
+above it can be seen that Manny Pacquiao has a stamina of 18 and strength of 49. When combining the two numbers together, you get 67 which falls
+in Level[4] which is between 60 and 75. Therefore, giving the boxer a fighting level of Professional. The front-end api displays this as a 
+sentence which is seen above the new boxer button.
+
+<a name="TA"></a>
+## Testing and Automation
