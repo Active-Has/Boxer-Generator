@@ -143,7 +143,7 @@ In order for this to occur, a combination of tools was used which have been name
 the Jenkins goes through stage 1 which is testing stage. This stage is showing the testing of the four services which has been done manually above.
 This can also be seen in the Jenkins console output which is shown in the image shown below.
 
-
+![testing in jenkins](https://user-images.githubusercontent.com/101266487/168638005-3c6e03c8-b8ff-411a-a0c2-3f4cec0b8831.JPG)
 
 The second stage Jenkins goes through is the docker stage. This is where Jenkins starts to build images for all four services and the images are
 then pushed to Dockerhub. Dockerhub username and password has environment variables which has already been set beforehand therefore Jenkins can 
@@ -154,6 +154,17 @@ through the use of its playbook and inventory and the other main.yml files in th
 swarm-manager and swarm-worker so that the application is ready for deployment. The Ansible Playbook first install docker on all swarm machines, 
 then it initialises a swarm on the manager node and uses the Ansible docker stack module to deploy the application. Finally, the last role for the
 Ansible playbook is to add the worker node to the swarm.
+
+When the whole stage is complete and is a success. The build will show a green tick as shown below.
+![pipeline2](https://user-images.githubusercontent.com/101266487/168639232-8111e53c-b98d-4726-b1a4-03d50bf708be.JPG)
+![success](https://user-images.githubusercontent.com/101266487/168639298-3bb286b8-f233-4e83-b58a-8b35d2198f28.JPG)
+
+The stage will come across as green if your whole stage is a success as seen in the image below. However, if one stage fails, Jenkins will show 
+what stage failed by showing it in red. 
+![pipeline](https://user-images.githubusercontent.com/101266487/168639394-eb9bf7ba-4347-4b2e-864a-1bcbdacfd8aa.JPG)
+
+The last aspect of the deployment is the use of a Webhook. This is where if the code is changed from VS and is then pushed and then 
+committed. The Jenkins pipeline since linked to the github branch, will automatically run a new build.
 
 <a name="FD"></a>
 ## Future Development
