@@ -116,3 +116,59 @@ sentence which is seen above the new boxer button.
 
 <a name="TA"></a>
 ## Testing and Automation
+To test the python routes, pytest was used to ensure the back-end of my application was functional. This tests all of the written code to see if
+there are any issues that may need correcting. Using pytest --cov, this allows us to show the coverage which can be seen in the image below.
+Furthermore, assertions are used to ensure the correct output is being used and the request/request_mock is used to simulate the interactions 
+between the services. 
+
+Service 1:
+
+![service1](https://user-images.githubusercontent.com/101266487/168610627-e3f5739f-65e3-421f-beb8-1aac46384b0f.JPG)
+
+Service 2:
+
+![service2](https://user-images.githubusercontent.com/101266487/168610758-106d6396-dabd-41ac-b898-28540854e958.JPG)
+
+Service 3:
+
+![service3](https://user-images.githubusercontent.com/101266487/168610799-9e38070c-9f33-4cb9-af67-38aef038e193.JPG)
+
+Service 4:
+
+![service4](https://user-images.githubusercontent.com/101266487/168610838-16ee7b03-2278-4025-ae1b-51438ce33c96.JPG)
+
+### Jenkins ###
+Jenkins was used as a continuous deployment, where if the application had a change in code, the user would not experience any downtime at all.
+In order for this to occur, a combination of tools was used which have been named in the requirements table in the Project Objective. At first 
+the Jenkins goes through stage 1 which is testing stage. This stage is showing the testing of the four services which has been done manually above.
+This can also be seen in the Jenkins console output which is shown in the image shown below.
+
+
+
+The second stage Jenkins goes through is the docker stage. This is where Jenkins starts to build images for all four services and the images are
+then pushed to Dockerhub. Dockerhub username and password has environment variables which has already been set beforehand therefore Jenkins can 
+login and push the images up to our Dockerhub account. 
+
+The next stage Jenkins goes through is the deployment stage. This is where the application is deployed by using Docker-Swarm whilst using Ansible 
+through the use of its playbook and inventory and the other main.yml files in the swarm-manager and swarm-worker files. Ansible configures the
+swarm-manager and swarm-worker so that the application is ready for deployment. The Ansible Playbook first install docker on all swarm machines, 
+then it initialises a swarm on the manager node and uses the Ansible docker stack module to deploy the application. Finally, the last role for the
+Ansible playbook is to add the worker node to the swarm.
+
+<a name="FD"></a>
+## Future Development
+The next phase for this application to go through is the following
+-	Creating a database to store all generated boxers
+-	Better UI design could be used instead of making the page look plain and simple
+-	A more welcoming home page with details of how the application works
+The future development of the application above is key if the application was used in an actual fighting game for example. As the database would 
+store generated boxer’s and their stats to go up against an upcoming opponent.	Furthermore, better UI graphics would make the application more 
+appealing to look at.
+
+
+## Acknowledgements
+* 22MarEnable1 Cohort
+* QA Community
+
+## Authors
+**Hasnaath Ali**
